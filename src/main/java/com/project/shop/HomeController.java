@@ -1,9 +1,5 @@
 package com.project.shop;
 
-import java.text.DateFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Locale;
 
 import org.slf4j.Logger;
@@ -25,32 +21,7 @@ public class HomeController {
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
-		
-		/*
-		 * logger.info("Welcome home! The client locale is {}.", locale);
-		 * 
-		 * Date date = new Date(); DateFormat dateFormat =
-		 * DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		 * 
-		 * String formattedDate = dateFormat.format(date);
-		 * 
-		 * model.addAttribute("serverTime", formattedDate );
-		 * 
-		 * // MAPPER logger.info("MAPPER ����");
-		 * 
-		 * List<HashMap<String, SampleUserVO>> selectAllResult =
-		 * sampleUserDAOImpl.selectAll();
-		 * 
-		 * for(HashMap<String, SampleUserVO> item : selectAllResult)
-		 * logger.info(item.toString());
-		 * 
-		 * logger.info(Integer.toString(sampleUserDAOImpl.getCount()));
-		 * 
-		 * 
-		 * logger.info("MAPPER ��");
-		 */
-		System.out.println("d");
-		logger.info("Welcome home! The client locale is {}.", locale);
+		logger.info("HomeController");
 		return "home";
 	}
 
