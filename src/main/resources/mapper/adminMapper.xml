@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="adminMapper">
+
+	<resultMap id="memberResultSet" type="com.project.shop.admin.service.Member">
+		<id property="mNo" column="M_No"/>
+		<result property="mId" column="M_Id"/>
+		<result property="mPwd" column="M_Pwd"/>
+		<result property="mName" column="M_Name"/>
+		<result property="mAddress" column="M_Address"/>
+		<result property="mPhone" column="M_Phone"/>
+		<result property="mRole" column="M_Role"/>
+	</resultMap>
+
+	<resultMap id="goodsResultSet" type="com.project.shop.shop.domain.GoodsVO">
+		<id property="gNo" column="g_No"/>
+		<result property="gName" column="G_NAME"/>
+		<result property="gPrice" column="G_PRICE"/>
+		<result property="gContents" column="G_CONTENTS"/>
+		<result property="gStock" column="G_STOCK"/>
+		<result property="gThumb" column="G_THUMB"/>
+		<result property="gContentsPic" column="G_CONTENTS_PIC"/>
+		<result property="gCategory" column="G_CATEGORY"/>
+	</resultMap>	
+	
+    <select id="memberList" resultMap="memberResultSet">
+        SELECT *
+		FROM Member;
+    </select>
+	
+	<insert id="insertGoods" parameterType="com.project.shop.shop.domain.GoodsVO">
+		INSERT INTO GOODS(G_NAME,G_PRICE,G_CONTENTS,G_STOCK,G_THUMB,G_CONTENTS_PIC)
+		VALUES(
+			#{gName}, #{gPrice}, #{gContents},#{gStock}, #{gThumb}, #{gContentsPic} 
+		)
+	</insert>
+	
+		
+    <select id="goodsList" resultMap="goodsResultSet">
+        SELECT *
+		FROM GOODS;
+    </select>
+
+</mapper>
