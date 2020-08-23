@@ -29,9 +29,9 @@
     </select>
 	
 	<insert id="insertGoods" parameterType="com.project.shop.shop.domain.GoodsVO">
-		INSERT INTO GOODS(G_NAME,G_PRICE,G_CONTENTS,G_STOCK,G_THUMB,G_CONTENTS_PIC)
+		INSERT INTO GOODS(G_NAME,G_PRICE,G_CONTENTS,G_STOCK,G_THUMB,G_CONTENTS_PIC,G_CATEGORY)
 		VALUES(
-			#{gName}, #{gPrice}, #{gContents},#{gStock}, #{gThumb}, #{gContentsPic} 
+			#{gName}, #{gPrice}, #{gContents},#{gStock}, #{gThumb}, #{gContentsPic} ,#{gCategory}
 		)
 	</insert>
 	
