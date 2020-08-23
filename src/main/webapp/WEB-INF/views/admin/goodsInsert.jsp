@@ -161,7 +161,6 @@
                                 
                                 <td colspan="6"><h5><strong>옵션</strong></h5></td>
                              </tr>
-  
                              <tr>
                                 <td>가격</td>
                                 <td><input type="number" name="gPrice" size="58" name="gPrice" min="0"
@@ -178,6 +177,15 @@
                                 <td colspan="6"><input type="text" size="58" name="gName"
                                    class="tt"></td>
                              </tr>
+
+                                                          
+                             <tr>
+                                 <td colspan="6"><h5><strong>카테고리</strong></h5></td>
+                             </tr>
+                             <tr>
+                             	<td colspan="6"><input type="text" size="58" class="tt" name="gCategory" ></td>
+                             </tr>
+                             
                              <tr>
                                 <td colspan="6"><h5><strong>내용@</strong></h5></td>
                              </tr>

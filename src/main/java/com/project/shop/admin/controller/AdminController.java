@@ -26,6 +26,7 @@ import com.project.shop.admin.service.AdminServiceImpl;
 import com.project.shop.admin.service.Member;
 import com.project.shop.shop.domain.GoodsVO;
 
+
 @Controller
 public class AdminController {
 	// 사진 저장을 위한 전역변수
@@ -170,7 +171,7 @@ public class AdminController {
 	}
 	
 	
-	// 관리자페이지-회원 목록 이동
+	// 관리자페이지-상품 목록 이동
 	@RequestMapping(value = "/adminGoodsList.do")
 	public ModelAndView goodList(ModelAndView mv) {
 		ArrayList<GoodsVO> goodsList = adminServiceImpl.goodsList();
