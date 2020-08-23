@@ -5,5 +5,20 @@
 						https://www.springframework.org/schema/beans/spring-beans.xsd">
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
+		<bean id="multipartResolver"
+	class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="100000000"/>
+		<property name="maxInMemorySize" value="100000000"/>
+	</bean>
+	
+	<!-- ADMIN -->
+		<bean id="AdminServiceImpl" class="com.project.shop.admin.service.AdminServiceImpl">
+  		<constructor-arg ref="AdminDaoImpl" />
+	</bean>	  
+	
+	<bean id="AdminDaoImpl" class="com.project.shop.admin.service.AdminDaoImpl">
+			<constructor-arg name="sqlSession" ref="sqlSession" />
+	</bean>	
+		
 	
 </beans>

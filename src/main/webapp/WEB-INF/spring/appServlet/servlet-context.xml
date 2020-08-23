@@ -22,14 +22,7 @@
   		<constructor-arg ref="AdminServiceImpl" />
 	</bean>	  
 
-	<bean id="AdminServiceImpl" class="com.project.shop.admin.service.AdminServiceImpl">
-  		<constructor-arg ref="AdminDaoImpl" />
-	</bean>	  
-	
-	<bean id="AdminDaoImpl" class="com.project.shop.admin.service.AdminDaoImpl">
-			<constructor-arg name="sqlSession" ref="sqlSession" />
-	</bean>	
-		
+
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/views/" />
